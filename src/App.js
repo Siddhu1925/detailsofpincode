@@ -50,7 +50,8 @@ function App() {
   return (
     <Container maxWidth="md">
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2rem 0" }}>
-        <TextField label="Enter Pincode" variant="outlined" value={pincode} onChange={handlePincodeChange} style={{ marginBottom: "1rem" }} />
+        <h1>DETAILS OF PINCODE</h1>
+    <TextField label="Enter Pincode" variant="outlined" value={pincode} onChange={handlePincodeChange} style={{ marginBottom: "1rem" }} />
         <Button variant="contained" color="primary" onClick={handleLookup} disabled={isLoading}>
           Lookup
         </Button>
