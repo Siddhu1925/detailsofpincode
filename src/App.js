@@ -50,7 +50,7 @@ function App() {
   return (
     <Container maxWidth="md">
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2rem 0" }}>
-        <h1>DETAILS OF PINCODE</h1>
+        <h1>ENTER PINCODE NUMBER</h1>
     <TextField label="Enter Pincode" variant="outlined" value={pincode} onChange={handlePincodeChange} style={{ marginBottom: "1rem" }} />
         <Button variant="contained" color="primary" onClick={handleLookup} disabled={isLoading}>
           Lookup
@@ -59,7 +59,10 @@ function App() {
       {isLoading && <div>Loading...</div>}
       {!isLoading && filteredData && (
         <div style={{ marginBottom: "2rem" }}>
-          <TextField label="Filter by Post Office Name" variant="outlined" value={filter} onChange={handleFilterChange} style={{ marginBottom: "1rem" }} />
+            <p><b>Pincode:{pincode}</b></p>
+         <p><b>Message:</b> Number of pincode(s) found: </p>
+            <label style={{fontSize:"30px"}}>Filter</label>
+          <input label="Filter by Post Office Name" variant="outlined" value={filter} onChange={handleFilterChange} style={{ marginBottom: "1rem" }} />
           <Grid container spacing={2}>
             {filteredData.PostOffice.map((po) => (
               <Grid item xs={12} sm={6} md={4} key={po.Name}>
